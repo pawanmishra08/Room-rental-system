@@ -13,10 +13,10 @@
     }
   </style>
   <body>
-  <nav class="navbar bg-body-tertiary" style ="background-color: gray !important;">
+  <!-- <nav class="navbar bg-body-tertiary" style ="background-color: gray !important;">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1JFzNNKnDkBEBbU_YP9oCYc_HxuKZ_e2cw0Lif1nslOsSonRkjhmNzE8&s" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
     </a>
   </div>
-</nav>
+</nav> -->

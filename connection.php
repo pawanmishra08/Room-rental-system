@@ -5,7 +5,7 @@ $pass="";
 $dbname ="room-rental-system";
 $conn = new mysqli($server, $username ,$pass, $dbname);
 if($conn) {
-    echo "connected";
+    echo "";
 } else {
     echo "not connected";
 }

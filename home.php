@@ -8,9 +8,8 @@ if(isset($_POST['submit'])){
     $phone = $_POST['phone_number'];
     $room_type = $_POST['room_type'];
     $room_no = $_POST['room_no'];
-    $password = $_POST['password'];
 
-    $sql = "INSERT INTO `room_info`( `name`, `email`, `address`, `phone_number`, `room_type`, `room_no`, `password`) VALUES ('$name','$email','$address','$phone','$room_type','$room_no','$password')";
+    $sql = "INSERT INTO `room_info`( `name`, `email`, `address`, `phone_number`, `room_type`, `room_no`) VALUES ('$name','$email','$address','$phone','$room_type','$room_no')";
 
     if($conn->query($sql))
     {
@@ -86,10 +85,6 @@ echo "</pre>";
                                     <input type="radio" name="room_type" value="NON-AC"> Non-AC Room
                                 </label>
                             </div>
-                            <div class="mb-3">
-                                <label for="password" class="form-label" style="font-weight: bold;">Password</label>
-                                <input type="password" name= "password" class="form-control" placeholder="Enter the password here!">
-                            </div>
                             <button type="submit"  name="submit" class="btn btn-success">Click Here to book room!</button>
                     </form>
                 </div>
@@ -107,7 +102,6 @@ echo "</pre>";
                 <th scope = "col">phone_number</th>
                 <th scope = "col">Room_type</th>
                 <th scope = "col">room_no</th>
-                <th scope = "col">password</th>
                 <th scope = "col">Actions</th>
                 </tr>
             </thead>
@@ -124,7 +118,6 @@ echo "</pre>";
                 <td><?php echo $value['phone_number']; ?> </td>
                 <td><?php echo $value['room_type']; ?> </td>
                 <td><?php echo $value['room_no']; ?> </td>
-                <td><?php echo $value['password']; ?> </td>
                 <td>
                 <a href ="std_edit.php?id=<?php echo $value['id']; ?>"  class="bi bi-pen"></button>
                 <a href ="std_delete.php?id=<?php echo $value['id']; ?>" class="bi bi-trash"></button>

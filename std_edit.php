@@ -14,7 +14,7 @@ if(!empty($_GET['id']))
     //print_r($data)
 
     if(isset($_POST['submit'])) {
-        print_r($$_POST);
+        print_r($_POST);
         $id= $_POST['id'];
         $name= $_POST['name'];
         $email= $_POST['email'];
@@ -22,9 +22,9 @@ if(!empty($_GET['id']))
         $phone= $_POST['phone_number'];
         $room_type= $_POST['room_type'];
         $room_no= $_POST['room_no'];
-        $password= $_POST['password'];
 
-        $updatesql = "UPDATE `room_info` SET `name`='$name',`email`= '$email',`address`='$address',`phone_number`='$phone',`room_type`='$room_type',`room_no`='$room_no',`password`='$password' WHERE id = $id";
+
+        $updatesql = "UPDATE `room_info` SET `name`='$name',`email`= '$email',`address`='$address',`phone_number`='$phone',`room_type`='$room_type',`room_no`='$room_no' WHERE id = $id";
         if($conn->query($updatesql)) {
             header("Location: home.php");
         }
@@ -85,10 +85,6 @@ if(!empty($_GET['id']))
                                 <label>
                                     <input type="radio" value="<?php echo $data['room_type']; ?>"name="room_type" value="NON-AC"> Non-AC Room
                                 </label>
-                            </div>
-                            <div class="mb-3">
-                                <label for="password" class="form-label" style="font-weight: bold;">Password</label>
-                                <input type="password" value="<?php echo $data['password']; ?>"name= "password" class="form-control" placeholder="Enter the password here!">
                             </div>
 
              <button type="submit"  name ="submit" class="btn btn-success">Submit</button>
